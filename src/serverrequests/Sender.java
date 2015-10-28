@@ -15,6 +15,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -76,12 +77,10 @@ class Sender {
             }
             rd.close();
             System.out.println(response.toString());
-            
 
         } catch (Exception e) {
 
             e.printStackTrace();
-            
 
         } finally {
 
@@ -89,6 +88,26 @@ class Sender {
                 connection.disconnect();
             }
         }
+
+    }
+    
+    /**
+     * Converts hash map into a string
+     * @param map  string to string map
+     * @return 
+     */
+    private String hashSerialize(HashMap<String, String> map){
+        String str = "{";
+        for (HashMap.Entry<String, String> entry : map.entrySet()) {
+            str += "\"" + entry.getKey() + "\":\"" + entry.getValue() + "\",";
+        }
+        str = str.substring(0, str.length() - 1) + "}";
+        return str;
+    }
+
+    void put(String url, HashMap<String, String> map) {
+        String jsonData = hashSerialize(map);
+        this.put(url, jsonData);
 
     }
 

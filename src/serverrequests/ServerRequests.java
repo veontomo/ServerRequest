@@ -19,6 +19,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -28,10 +31,10 @@ import java.util.Map.Entry;
 public class ServerRequests {
 
     //private static final String url = "http://2.228.14.114";
-    private static final String url = "http://192.168.5.28:3000/views";
+    private static final String url = "http://192.168.5.28:8080/views";
     private static final String charset = "UTF-8";
-    private static final int ATTEMPTS = 1;
-    private static final int USERS = 3;
+    private static final int ATTEMPTS = 4;
+    private static final int USERS = 5;
 
     /**
      * @param args the command line arguments
@@ -54,12 +57,7 @@ public class ServerRequests {
         //s.put("http:\/\/192.168.5.28:3000\/views\/routes\/load", "{\"1\":\"http://localhost:3000\/views\/local\"}");
 
         s = new Sender();
-        String jsonData = "{";
-        for (HashMap.Entry<String, String> entry : map.entrySet()){
-            jsonData += "\"" + entry.getKey() + "\":\"" + entry.getValue() + "\",";
-        }
-        jsonData = jsonData.substring(0, jsonData.length()-1) + "}";
-        s.put(url + "/routes/load", jsonData);
+        s.put(url + "/routes/load", map);
         
         
         for (int i = 0; i < USERS; i++) {
@@ -70,17 +68,7 @@ public class ServerRequests {
             s.get(url + query, ATTEMPTS);
         }
 
-//        String param1 = "value1";
-//        String param2 = "value2";
-//        String query = String.format("param1=%s&param2=%s",
-//                URLEncoder.encode(param1, charset),
-//                URLEncoder.encode(param2, charset));
-//        URLConnection connection = new URL(url + "?" + query).openConnection();
-//        connection.setRequestProperty("Accept-Charset", charset);
-//        InputStream response = connection.getInputStream();
-//        for (Entry<String, List<String>> header : connection.getHeaderFields().entrySet()) {
-//            System.out.println(header.getKey() + "=" + header.getValue());
-//        }
+
     }
 
 }
