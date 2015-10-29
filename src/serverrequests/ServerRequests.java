@@ -33,8 +33,8 @@ public class ServerRequests {
     //private static final String url = "http://2.228.14.114";
     private static final String url = "http://192.168.5.28:8080/views";
     private static final String charset = "UTF-8";
-    private static final int ATTEMPTS = 4;
-    private static final int USERS = 5;
+    private static final int ATTEMPTS = 20;
+    private static final int USERS = 100;
 
     /**
      * @param args the command line arguments
