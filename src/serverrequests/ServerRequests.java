@@ -47,18 +47,18 @@ public class ServerRequests {
         String param2, query;
         HashMap<String, String> paths = new HashMap<>();
         HashMap<String, String> auth = new HashMap<>();
-        HashMap<String, String> data = new HashMap<>();
+        HashMap<String, HashMap<String, String>> data = new HashMap<>();
         
         paths.put("1", "http://www.venditori.it");
         paths.put("2", "http://www.rappresentanti.it");
         paths.put("3", "http://www.soluzioneagenti.it");
         paths.put("4", "http://www.cercoagenti.it");
         
-        auth.put("user", "Sun");
-        auth.put("pswd", "shine");
+        auth.put("login", "Sun");
+        auth.put("password", "shine");
         
-        data.put("auth", Sender.hashSerialize(auth));
-        data.put("paths", Sender.hashSerialize(paths));
+        data.put("auth", auth);
+        data.put("paths", paths);
         
         int poolSize = paths.size();
         String[] pool = paths.keySet().toArray(new String[poolSize]);
@@ -67,11 +67,8 @@ public class ServerRequests {
         
         //s.put("http:\/\/192.168.5.28:3000\/views\/routes\/load", "{\"1\":\"http://localhost:3000\/views\/local\"}");
 
-        System.out.println(Sender.hashSerialize(data));
         s = new Sender();
-        
-        s.put(url + "/routes/load", Sender.hashSerialize(data));
-        
+        s.put(url + "/routes/load", Sender.hashSerializeNested(data));
         
         for (int i = 0; i < USERS; i++) {
             param2 = pool[i % poolSize];
@@ -79,7 +76,7 @@ public class ServerRequests {
 
             s = new Sender();
             
-            //s.get(url + query, ATTEMPTS);
+            s.get(url + query, ATTEMPTS);
         }
 
 

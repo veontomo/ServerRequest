@@ -104,6 +104,20 @@ class Sender {
         str = str.substring(0, str.length() - 1) + "}";
         return str;
     }
+    
+    /**
+     * Converts hash map into a string
+     * @param map  string to string map
+     * @return 
+     */
+    public static String hashSerializeNested(HashMap<String, HashMap<String, String>> map){
+        String str = "{";
+        for (HashMap.Entry<String, HashMap<String, String>> entry : map.entrySet()) {
+            str += "\"" + entry.getKey() + "\":" + hashSerialize(entry.getValue()) + ",";
+        }
+        str = str.substring(0, str.length() - 1) + "}";
+        return str;
+    }
 
     
 
