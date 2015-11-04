@@ -14,10 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -90,37 +87,38 @@ class Sender {
         }
 
     }
-    
+
     /**
      * Converts hash map into a string
-     * @param map  string to string map
-     * @return 
+     *
+     * @param map string to string map
+     * @return
      */
-    public static <T> String hashSerialize(HashMap<String, T> map){
-        if (map == null){
+    public static <T> String hashSerialize(HashMap<String, T> map) {
+        if (map == null) {
             return "";
         }
-        String str = "{", 
+        String str = "{",
                 key;
         T value;
-        
+
         for (HashMap.Entry<String, T> entry : map.entrySet()) {
             value = entry.getValue();
             key = entry.getKey();
             str += "\"" + key + "\":";
-            if (value instanceof String){
+            if (value instanceof String) {
                 str += "\"" + value + "\",";
             } else {
                 HashMap<String, ?> value2 = (HashMap<String, ?>) value;
-                if (value2 != null){
-                    str += hashSerialize(value2)  + ",";
+                if (value2 != null) {
+                    str += hashSerialize(value2) + ",";
                 }
             }
         }
         str = str.substring(0, str.length() - 1) + "}";
         return str;
     }
-    
+
     class RequestSender implements Runnable {
 
         private final String url;

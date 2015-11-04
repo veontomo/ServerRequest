@@ -5,23 +5,9 @@
  */
 package serverrequests;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -30,9 +16,7 @@ import java.util.logging.Logger;
  */
 public class ServerRequests {
 
-    //private static final String url = "http://192.168.5.114:8080/views";
-//     private static final String url = "http://2.228.14.114/views";
-    private static final String url = "http://192.168.5.28:80/views";
+    private static final String url = "http://192.168.5.28/views";
     private static final String charset = "UTF-8";
     private static final int ATTEMPTS = 15;
     private static final int USERS = 10;
