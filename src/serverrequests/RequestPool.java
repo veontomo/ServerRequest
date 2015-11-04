@@ -14,6 +14,10 @@ public class RequestPool {
      * max number of requests that the pool can execute simultaneously
      */
     private final int size;
+    /**
+     * Url of the server to which the requests are to be sent
+     */
+    private String serverUrl;
     
     private final Semaphore semaphore;
     
@@ -21,5 +25,12 @@ public class RequestPool {
         this.size = s;
         this.semaphore = new Semaphore(s);
     }
+    
+    public void setServerUrl(String url){
+        this.serverUrl = url;
+    }
+    
+    
+    
     
 }
