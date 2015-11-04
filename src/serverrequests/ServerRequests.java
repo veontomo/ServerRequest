@@ -68,7 +68,8 @@ public class ServerRequests {
         //s.put("http:\/\/192.168.5.28:3000\/views\/routes\/load", "{\"1\":\"http://localhost:3000\/views\/local\"}");
 
         s = new Sender();
-        s.put(url + "/routes/load", Sender.hashSerializeNested(data));
+        s.put(url + "/routes/load", Sender.hashSerialize(data));
+        System.out.println(Sender.hashSerialize(data));
         
         for (int i = 0; i < USERS; i++) {
             param2 = pool[i % poolSize];

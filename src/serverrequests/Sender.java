@@ -96,31 +96,31 @@ class Sender {
      * @param map  string to string map
      * @return 
      */
-    public static String hashSerialize(HashMap<String, String> map){
-        String str = "{";
-        for (HashMap.Entry<String, String> entry : map.entrySet()) {
-            str += "\"" + entry.getKey() + "\":\"" + entry.getValue() + "\",";
+    public static <T> String hashSerialize(HashMap<String, T> map){
+        if (map == null){
+            return "";
+        }
+        String str = "{", 
+                key;
+        T value;
+        
+        for (HashMap.Entry<String, T> entry : map.entrySet()) {
+            value = entry.getValue();
+            key = entry.getKey();
+            str += "\"" + key + "\":";
+            if (value instanceof String){
+                str += "\"" + value + "\",";
+            } else {
+                HashMap<String, ?> value2 = (HashMap<String, ?>) value;
+                if (value2 != null){
+                    str += hashSerialize(value2)  + ",";
+                }
+            }
         }
         str = str.substring(0, str.length() - 1) + "}";
         return str;
     }
     
-    /**
-     * Converts hash map into a string
-     * @param map  string to string map
-     * @return 
-     */
-    public static String hashSerializeNested(HashMap<String, HashMap<String, String>> map){
-        String str = "{";
-        for (HashMap.Entry<String, HashMap<String, String>> entry : map.entrySet()) {
-            str += "\"" + entry.getKey() + "\":" + hashSerialize(entry.getValue()) + ",";
-        }
-        str = str.substring(0, str.length() - 1) + "}";
-        return str;
-    }
-
-    
-
     class RequestSender implements Runnable {
 
         private final String url;
