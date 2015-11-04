@@ -96,7 +96,7 @@ class Sender {
      * @param map  string to string map
      * @return 
      */
-    private String hashSerialize(HashMap<String, String> map){
+    public static String hashSerialize(HashMap<String, String> map){
         String str = "{";
         for (HashMap.Entry<String, String> entry : map.entrySet()) {
             str += "\"" + entry.getKey() + "\":\"" + entry.getValue() + "\",";
@@ -105,11 +105,7 @@ class Sender {
         return str;
     }
 
-    void put(String url, HashMap<String, String> map) {
-        String jsonData = hashSerialize(map);
-        this.put(url, jsonData);
-
-    }
+    
 
     class RequestSender implements Runnable {
 
@@ -129,6 +125,7 @@ class Sender {
             InputStream response;
             String header;
             for (int i = 0; i < tries; i++) {
+                System.out.println("Sender " + senderId + " is trying to make connection no. " + i + " out of " + tries + " to " + url);
                 try {
                     connection = new URL(url).openConnection();
                     connection.setRequestProperty("Accept-Charset", charset);

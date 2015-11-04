@@ -30,11 +30,12 @@ import java.util.logging.Logger;
  */
 public class ServerRequests {
 
-    //private static final String url = "http://2.228.14.114";
-    private static final String url = "http://192.168.5.28:8080/views";
+    //private static final String url = "http://192.168.5.114:8080/views";
+//     private static final String url = "http://2.228.14.114/views";
+    private static final String url = "http://192.168.5.28:80/views";
     private static final String charset = "UTF-8";
-    private static final int ATTEMPTS = 20;
-    private static final int USERS = 100;
+    private static final int ATTEMPTS = 15;
+    private static final int USERS = 10;
 
     /**
      * @param args the command line arguments
@@ -44,20 +45,32 @@ public class ServerRequests {
         Sender s;
 
         String param2, query;
-        HashMap<String, String> map = new HashMap<>();
-        map.put("1", "http://www.venditori.it");
-        map.put("2", "http://www.rappresentanti.it");
-        map.put("3", "http://www.soluzioneagenti.it");
-        map.put("4", "http://www.cercoagenti.it");
-        int poolSize = map.size();
-        String[] pool = map.keySet().toArray(new String[poolSize]);
+        HashMap<String, String> paths = new HashMap<>();
+        HashMap<String, String> auth = new HashMap<>();
+        HashMap<String, String> data = new HashMap<>();
+        
+        paths.put("1", "http://www.venditori.it");
+        paths.put("2", "http://www.rappresentanti.it");
+        paths.put("3", "http://www.soluzioneagenti.it");
+        paths.put("4", "http://www.cercoagenti.it");
+        
+        auth.put("user", "Sun");
+        auth.put("pswd", "shine");
+        
+        data.put("auth", Sender.hashSerialize(auth));
+        data.put("paths", Sender.hashSerialize(paths));
+        
+        int poolSize = paths.size();
+        String[] pool = paths.keySet().toArray(new String[poolSize]);
         // curl -H "Content-Type: application/json" -X POST -d "{\"1\":\"http://www.venditori.it\",\"2\":\"http://www.rappresentanti.it\"}" http://192.168.5.28:3000/views/routes/load
         // curl -H "Content-Type: application/json" -X POST -d "{\"1\":\"http://localhost:3000\/views\/local\"}" http://192.168.5.28:3000/views/routes/load
         
         //s.put("http:\/\/192.168.5.28:3000\/views\/routes\/load", "{\"1\":\"http://localhost:3000\/views\/local\"}");
 
+        System.out.println(Sender.hashSerialize(data));
         s = new Sender();
-        s.put(url + "/routes/load", map);
+        
+        s.put(url + "/routes/load", Sender.hashSerialize(data));
         
         
         for (int i = 0; i < USERS; i++) {
@@ -65,7 +78,8 @@ public class ServerRequests {
             query = String.format("/idem/%s", URLEncoder.encode(param2, charset));
 
             s = new Sender();
-            s.get(url + query, ATTEMPTS);
+            
+            //s.get(url + query, ATTEMPTS);
         }
 
 
