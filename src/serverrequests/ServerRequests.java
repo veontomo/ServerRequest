@@ -14,7 +14,7 @@ import java.util.HashMap;
  * @author Andrea
  * http://stackoverflow.com/questions/2793150/using-java-net-urlconnection-to-fire-and-handle-http-requests
  */
-public class ServerRequests {
+public class ServerRequest {
 
     private static final String url = "http://192.168.5.28/views";
     private static final String charset = "UTF-8";
