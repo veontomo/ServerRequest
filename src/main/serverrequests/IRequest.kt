@@ -3,38 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package serverrequests;
+package serverrequests
 
-import java.net.URL;
+import java.net.URL
 
 /**
- *
+
  * @author Andrea
  */
-public interface IRequest {
+interface IRequest {
+
     /**
      * Method by means of which the request is to be sent (POST, PUT, GET etc)
-     * @param s 
+     * @param s
      */
-    void setMethod(String s);
-    
-    String getMethod();
+    var method: String
+
     /**
      * Set url where the request should be sent
-     * @param url 
+     * @param url
      */
-    void setUrl(URL url);
-    
-    URL getUrl();
+    var url: URL
 
     /**
      * Performs the request
      */
-    void execute();
-    
+    fun execute()
+
     /**
      * Server responce to the request
-     * @return 
+     * @return
      */
-    String responce();
+    fun responce(): String
 }
