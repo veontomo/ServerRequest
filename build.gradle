@@ -1,7 +1,7 @@
 group 'ServerRequests'
 
 buildscript {
-    ext.kotlin_version = '1.1.1-eap-26'
+    ext.kotlin_version = '1.1.1'
     repositories {
         mavenCentral()
         maven {
@@ -72,7 +72,6 @@ dependencies {
     testCompile 'de.jodamob.kotlin:kotlin-runner-junit4:0.3.1'
     testCompile "org.testfx:testfx-core:4.0.+"
     testCompile "org.testfx:testfx-junit:4.0.+"
-    compile 'com.squareup.retrofit2:adapter-rxjava2:latest.version'
     compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.4-beta'
 }
 apply from: "script-git-version.gradle"

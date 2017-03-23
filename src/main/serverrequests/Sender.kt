@@ -20,7 +20,7 @@ import java.util.HashMap
 
  * @author Andrea
  */
-internal class Sender {
+internal class Sender(val id: String) {
 
     private val charset = "UTF-8"
     private val senderId: Int
@@ -30,13 +30,13 @@ internal class Sender {
         counter++
     }
 
-    operator fun get(url: String, tries: Int) {
+    fun getContent(url: String, tries: Int) {
         val r = RequestSender(url, tries, senderId)
         val t = Thread(r)
         t.start()
     }
 
-    fun put(address: String, data: String) {
+    fun putContent(address: String, data: String) {
         val url: URL
         var connection: HttpURLConnection? = null
         try {

@@ -36,11 +36,11 @@ class Controller : Initializable {
     private fun startExecution() {
         startBtn!!.isDisable = true
         stopBtn!!.isDisable = false
-        val url = urlText!!.text
+        val baseUrl = urlText!!.text
         val simReq = Integer.parseInt(simReqText!!.text)
         val req = Integer.parseInt(reqText!!.text)
         val requests = requestsTextArea!!.text.split("\n")
-        model.start(url, req, simReq, requests)
+        model.start(baseUrl, req, simReq, requests)
 
     }
 

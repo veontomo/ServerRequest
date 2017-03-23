@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ServerRequest.iml" filepath="$PROJECT_DIR$/.idea/ServerRequest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ServerRequests.iml" filepath="$PROJECT_DIR$/.idea/modules/ServerRequests.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ServerRequests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ServerRequests_main.iml" group="ServerRequests" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ServerRequests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ServerRequests_test.iml" group="ServerRequests" />
