@@ -35,11 +35,14 @@ class Controller : Initializable {
 
     private fun startExecution() {
         startBtn!!.isDisable = true
+        val baseUrl = "http://192.168.5.95:8070"
+//        urlText!!.text
         stopBtn!!.isDisable = false
-        val baseUrl = urlText!!.text
+
         val simReq = Integer.parseInt(simReqText!!.text)
         val req = Integer.parseInt(reqText!!.text)
-        val requests = requestsTextArea!!.text.split("\n")
+//        val requests = requestsTextArea!!.text.split("\n")
+        val requests = listOf("/subscribe", "/unsubscribe")
         model.start(baseUrl, req, simReq, requests)
 
     }

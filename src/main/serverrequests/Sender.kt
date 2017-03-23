@@ -43,7 +43,7 @@ internal class Sender(val id: String) {
             //Create connection
             url = URL(address)
             connection = url.openConnection() as HttpURLConnection
-            connection.requestMethod = "POST"
+            connection.requestMethod = "PUT"
             connection.setRequestProperty("Content-Type", "application/json")
 
             connection.setRequestProperty("Content-Length", "" + Integer.toString(data.toByteArray().size))
@@ -59,18 +59,20 @@ internal class Sender(val id: String) {
             wr.writeBytes(data)
             wr.flush()
             wr.close()
+            println("Done")
 
             //Get Response
-//            val `is` = connection.inputStream
-//            val rd = BufferedReader(InputStreamReader(`is`))
-//            var line: String
-//            val response = StringBuffer()
-//            while ((line = rd.readLine()) != null) {
-//                response.append(line)
-//                response.append('\r')
-//            }
-//            rd.close()
-//            println(response.toString())
+            val `is` = connection.inputStream
+            val rd = BufferedReader(InputStreamReader(`is`))
+            val response = StringBuffer()
+            var line = rd.readLine()
+            while (line != null) {
+                response.append(line)
+                response.append('\r')
+                line = rd.readLine()
+            }
+            rd.close()
+            println(response.toString())
 
         } catch (e: Exception) {
 
