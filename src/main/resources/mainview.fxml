@@ -11,13 +11,13 @@
         <Insets top="5" right="5" bottom="5" left="5"/>
     </padding>
     <Label text="Host" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1"/>
-    <TextField fx:id="urlText" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-    <Label  text="Requests" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1"/>
-    <TextArea fx:id="requestsTextArea" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="5"/>
+    <TextField fx:id="baseUrlText" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Paths" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1"/>
+    <TextArea fx:id="pathsTextArea" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="5"/>
     <Label text="Simultaneous requests" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
-    <TextField  fx:id="simReqText" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <TextField fx:id="numOfThreadsText" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
     <Label text="Total number of requests" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
-    <TextField fx:id="reqText" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+    <TextField fx:id="numRequestPerThreadText" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
     <Button fx:id="startBtn" text="Start" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
     <Button fx:id="stopBtn" text="Stop" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
 

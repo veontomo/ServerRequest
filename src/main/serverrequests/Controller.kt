@@ -5,7 +5,6 @@ import javafx.fxml.Initializable
 import javafx.scene.control.Button
 import javafx.scene.control.TextArea
 import javafx.scene.control.TextField
-import javafx.scene.text.Text
 import java.net.URL
 import java.util.*
 
@@ -13,10 +12,10 @@ class Controller : Initializable {
 
     @FXML private var startBtn: Button? = null
     @FXML private var stopBtn: Button? = null
-    @FXML private var urlText: TextField? = null
-    @FXML private var requestsTextArea: TextArea? = null
-    @FXML private var simReqText: TextField? = null
-    @FXML private var reqText: TextField? = null
+    @FXML private var baseUrlText: TextField? = null
+    @FXML private var pathsTextArea: TextArea? = null
+    @FXML private var numOfThreadsText: TextField? = null
+    @FXML private var numRequestPerThreadText: TextField? = null
     val model = Model()
 
 
@@ -39,8 +38,8 @@ class Controller : Initializable {
 //        urlText!!.text
         stopBtn!!.isDisable = false
 
-        val simReq = Integer.parseInt(simReqText!!.text)
-        val req = Integer.parseInt(reqText!!.text)
+        val simReq = Integer.parseInt(numOfThreadsText!!.text)
+        val req = Integer.parseInt(numRequestPerThreadText!!.text)
 //        val requests = requestsTextArea!!.text.split("\n")
         val requests = listOf("/subscribe", "/unsubscribe")
         model.start(baseUrl, req, simReq, requests)

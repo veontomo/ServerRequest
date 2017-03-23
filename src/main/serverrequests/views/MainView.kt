@@ -1,4 +1,4 @@
-package serverrequets.views
+package serverrequests.views
 
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
