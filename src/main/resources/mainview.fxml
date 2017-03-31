@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ComboBox?>
 <GridPane fx:controller="serverrequests.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="BASELINE_LEFT" hgap="10" vgap="10">
 
@@ -15,7 +16,7 @@
     <TextField fx:id="baseUrlText" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
     <Label text="Paths" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1"/>
     <TextArea fx:id="pathsTextArea" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="5"/>
-    <Spinner fx:id="method" GridPane.columnIndex="7" GridPane.rowIndex="1" GridPane.columnSpan="1"/>
+    <ComboBox fx:id="method" GridPane.columnIndex="7" GridPane.rowIndex="1" GridPane.columnSpan="1"/>
     <Label text="Simultaneous requests" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
     <TextField fx:id="numOfThreadsText" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
     <Label text="Total number of requests" GridPane.columnIndex="0" GridPane.rowIndex="7"/>

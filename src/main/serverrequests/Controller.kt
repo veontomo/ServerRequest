@@ -15,13 +15,13 @@ class Controller : Initializable {
     @FXML private var pathsTextArea: TextArea? = null
     @FXML private var numOfThreadsText: TextField? = null
     @FXML private var numRequestPerThreadText: TextField? = null
-    @FXML private var method: Spinner<String>? = null
+    @FXML private var method: ComboBox<String>? = null
     val model = Model()
 
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
         stopBtn!!.isDisable = true
-        method!!.valueFactory = SpinnerValueFactory.ListSpinnerValueFactory<String>(FXCollections.observableArrayList(listOf("POST", "PUT")))
+        method!!.items = FXCollections.observableArrayList(listOf("POST", "PUT"))
         startBtn!!.setOnMouseClicked { startExecution() }
 
         stopBtn!!.setOnMouseClicked { stopExecution() }
