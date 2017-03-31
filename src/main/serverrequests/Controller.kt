@@ -1,10 +1,9 @@
 package serverrequests
 
+import javafx.collections.FXCollections
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
-import javafx.scene.control.Button
-import javafx.scene.control.TextArea
-import javafx.scene.control.TextField
+import javafx.scene.control.*
 import java.net.URL
 import java.util.*
 
@@ -16,11 +15,13 @@ class Controller : Initializable {
     @FXML private var pathsTextArea: TextArea? = null
     @FXML private var numOfThreadsText: TextField? = null
     @FXML private var numRequestPerThreadText: TextField? = null
+    @FXML private var method: Spinner<String>? = null
     val model = Model()
 
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
         stopBtn!!.isDisable = true
+        method!!.valueFactory = SpinnerValueFactory.ListSpinnerValueFactory<String>(FXCollections.observableArrayList(listOf("POST", "PUT")))
         startBtn!!.setOnMouseClicked { startExecution() }
 
         stopBtn!!.setOnMouseClicked { stopExecution() }

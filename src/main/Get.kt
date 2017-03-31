@@ -1,3 +1,4 @@
+import serverrequests.Request
 import java.io.IOException
 import java.io.InputStream
 import java.net.MalformedURLException
@@ -8,11 +9,11 @@ import java.net.URLConnection
  * An imumtable data type corresponding to a GET http request
  */
 class Get(val target: String) : Request {
+    private val charset = "UTF-8"
     override fun perform() {
         var connection: URLConnection?
         var response: InputStream
         val header: String
-        //System.out.println("Sender " + id + " is trying to make connection no. " + i + " out of " + tries + " to " + url);
         try {
             connection = URL(target).openConnection()
             connection!!.setRequestProperty("Accept-Charset", charset)

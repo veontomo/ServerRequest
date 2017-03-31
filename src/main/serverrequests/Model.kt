@@ -6,11 +6,8 @@ package serverrequests
  */
 class Model {
     fun start(baseUrl: String, totalRequests: Int, maxSimRequests: Int, requests: List<String>) {
-        for (i in 1..maxSimRequests) {
-//            Sender("sender $i").getContent(baseUrl, totalRequests)
-            Sender("sender $i").putContent(baseUrl + requests[0], "{\"port\":1234}", totalRequests)
-        }
-        println("$baseUrl, $totalRequests, $maxSimRequests, ${requests.joinToString { it }}")
+        val worker = Worker(listOf<Request>())
+        worker.start()
     }
 
     fun stop() {

@@ -1,3 +1,5 @@
+package serverrequests
+
 /**
  * An abstract data type for possible requests.
  *
