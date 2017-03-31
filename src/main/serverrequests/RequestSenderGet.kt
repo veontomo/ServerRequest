@@ -17,27 +17,5 @@ class RequestSenderGet(private val url: String, private val tries: Int, private 
     private val charset = "UTF-8"
 
     override fun run() {
-        var connection: URLConnection?
-        var response: InputStream
-        val header: String
-        for (i in 0..tries - 1) {
-            //System.out.println("Sender " + id + " is trying to make connection no. " + i + " out of " + tries + " to " + url);
-            try {
-                connection = URL(url).openConnection()
-                connection!!.setRequestProperty("Accept-Charset", charset)
-                connection.addRequestProperty("User-Agent", "Mozilla/4.76")
-                response = connection.getInputStream()
-                if (connection == null) {
-                    println("no responce!")
-                }
-            } catch (ex: MalformedURLException) {
-                println("url $url is not a valid one.")
-            } catch (ex: IOException) {
-                println("sender $id, try: $i can not connect to $url")
-                ex.printStackTrace()
-            }
-
-        }
-        println("sender $id has finished")
     }
 }
