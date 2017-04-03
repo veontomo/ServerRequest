@@ -4,12 +4,14 @@ package serverrequests
  * An immutable data type.
  * Represents a worker with multiple tasks to execute.
  */
-class Worker(val jobs: List<Request>) {
+class Worker(val name: String, val jobs: List<Request>) {
     /**
      * Perform all jobs assigned to this worker
      */
     fun start() {
+        println("Worker: $name start")
         jobs.forEach(Request::perform)
+        println("Worker: $name end")
     }
 
     fun stop(){

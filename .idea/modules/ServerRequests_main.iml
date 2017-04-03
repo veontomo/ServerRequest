@@ -2,52 +2,26 @@
 <module external.linked.project.id="ServerRequests:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="ServerRequests" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="1">
-        <option name="compilerInfo">
-          <KotlinCompilerInfo>
-            <option name="compilerSettings">
-              <CompilerSettings />
-            </option>
-            <option name="k2jsCompilerArguments">
-              <K2JSCompilerArguments>
-                <option name="moduleKind" value="plain" />
-              </K2JSCompilerArguments>
-            </option>
-            <option name="k2jvmCompilerArguments">
-              <K2JVMCompilerArguments>
-                <option name="noStdlib" value="true" />
-                <option name="noReflect" value="true" />
-                <option name="moduleName" value="ServerRequests_main" />
-                <option name="jvmTarget" value="1.6" />
-                <option name="addCompilerBuiltIns" value="true" />
-                <option name="languageVersion" value="1.1" />
-                <option name="apiVersion" value="1.1" />
-                <option name="coroutinesWarn" value="true" />
-              </K2JVMCompilerArguments>
-            </option>
-            <option name="_commonCompilerArguments">
-              <DummyImpl>
-                <option name="languageVersion" value="1.1" />
-                <option name="apiVersion" value="1.1" />
-                <option name="pluginClasspaths">
-                  <array />
-                </option>
-                <option name="coroutinesWarn" value="true" />
-                <option name="pluginOptions">
-                  <array />
-                </option>
-              </DummyImpl>
-            </option>
-          </KotlinCompilerInfo>
-        </option>
-        <option name="useProjectSettings" value="false" />
-        <option name="versionInfo">
-          <KotlinVersionInfo>
-            <option name="apiLevel" value="1.1" />
-            <option name="languageLevel" value="1.1" />
-            <option name="targetPlatformName" value="JVM 1.6" />
-          </KotlinVersionInfo>
-        </option>
+      <configuration version="2" platform="JVM 1.6" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="D:\Users\Andrey\Documents\Repos\ServerRequests\build\kotlin-classes\main" />
+          <option name="classpath" value="C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.1.2-eap-44\d145eb3cbfe6d786f279d6868ecab4555e743c3b\kotlin-stdlib-1.1.2-eap-44.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.10.1\645f1ad2f6f4cbad1cde4c483eae71e4051be6ef\jsoup-1.10.1.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.5\e7501a1b34325abb00d17dde96150604a0658b54\httpcore-4.4.5.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.2\733db77aa8d9b2d68015189df76ab06304406e50\httpclient-4.5.2.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.6\2586312cd2b8a511e4c6236736f5a039fc0f2273\rxjava-1.1.6.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\io.reactivex\rxkotlin\0.60.0\6729c889262e7c2cb6bba30cb9aa93d78167f69b\rxkotlin-0.60.0.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-core\0.14\9d6c8364cfba7d0e30132b6ffc5edd510a5c57e2\kotlinx-coroutines-core-0.14.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="ServerRequests_main" />
+          <option name="jvmTarget" value="1.6" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="languageVersion" value="1.1" />
+          <option name="apiVersion" value="1.1" />
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="coroutinesWarn" value="true" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+        </compilerArguments>
       </configuration>
     </facet>
   </component>
@@ -62,13 +36,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.2-eap-44" level="project" />
     <orderEntry type="library" name="Gradle: org.jsoup:jsoup:1.10.1" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.4.5" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.5.2" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex:rxjava:1.1.6" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex:rxkotlin:0.60.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:0.4-beta" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:0.14" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.9" level="project" />

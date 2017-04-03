@@ -2,52 +2,26 @@
 <module external.linked.project.id="ServerRequests:test" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="ServerRequests" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="1">
-        <option name="compilerInfo">
-          <KotlinCompilerInfo>
-            <option name="compilerSettings">
-              <CompilerSettings />
-            </option>
-            <option name="k2jsCompilerArguments">
-              <K2JSCompilerArguments>
-                <option name="moduleKind" value="plain" />
-              </K2JSCompilerArguments>
-            </option>
-            <option name="k2jvmCompilerArguments">
-              <K2JVMCompilerArguments>
-                <option name="noStdlib" value="true" />
-                <option name="noReflect" value="true" />
-                <option name="moduleName" value="ServerRequests_main" />
-                <option name="jvmTarget" value="1.6" />
-                <option name="addCompilerBuiltIns" value="true" />
-                <option name="languageVersion" value="1.1" />
-                <option name="apiVersion" value="1.1" />
-                <option name="coroutinesWarn" value="true" />
-              </K2JVMCompilerArguments>
-            </option>
-            <option name="_commonCompilerArguments">
-              <DummyImpl>
-                <option name="languageVersion" value="1.1" />
-                <option name="apiVersion" value="1.1" />
-                <option name="pluginClasspaths">
-                  <array />
-                </option>
-                <option name="coroutinesWarn" value="true" />
-                <option name="pluginOptions">
-                  <array />
-                </option>
-              </DummyImpl>
-            </option>
-          </KotlinCompilerInfo>
-        </option>
-        <option name="useProjectSettings" value="false" />
-        <option name="versionInfo">
-          <KotlinVersionInfo>
-            <option name="apiLevel" value="1.1" />
-            <option name="languageLevel" value="1.1" />
-            <option name="targetPlatformName" value="JVM 1.6" />
-          </KotlinVersionInfo>
-        </option>
+      <configuration version="2" platform="JVM 1.6" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="D:\Users\Andrey\Documents\Repos\ServerRequests\build\kotlin-classes\test" />
+          <option name="classpath" value="D:\Users\Andrey\Documents\Repos\ServerRequests\build\classes\main;D:\Users\Andrey\Documents\Repos\ServerRequests\build\resources\main;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.1.2-eap-44\d145eb3cbfe6d786f279d6868ecab4555e743c3b\kotlin-stdlib-1.1.2-eap-44.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.10.1\645f1ad2f6f4cbad1cde4c483eae71e4051be6ef\jsoup-1.10.1.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.5\e7501a1b34325abb00d17dde96150604a0658b54\httpcore-4.4.5.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.2\733db77aa8d9b2d68015189df76ab06304406e50\httpclient-4.5.2.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.6\2586312cd2b8a511e4c6236736f5a039fc0f2273\rxjava-1.1.6.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\io.reactivex\rxkotlin\0.60.0\6729c889262e7c2cb6bba30cb9aa93d78167f69b\rxkotlin-0.60.0.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-core\0.14\9d6c8364cfba7d0e30132b6ffc5edd510a5c57e2\kotlinx-coroutines-core-0.14.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-test-junit\1.1.2-eap-44\83e65710cd0c572425cb48e67018b5ba06b09e2d\kotlin-test-junit-1.1.2-eap-44.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.mockito\mockito-core\2.5.0\be28d46a52c7f2563580adeca350145e9ce916f8\mockito-core-2.5.0.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\com.nhaarman\mockito-kotlin\1.1.0\18a1bdb7cfa6ac47bc381deda5ee58bc9d821fea\mockito-kotlin-1.1.0.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\de.jodamob.kotlin\kotlin-runner-junit4\0.3.1\18aab02091ba3b44b36f3d91df2f36164c1ca611\kotlin-runner-junit4-0.3.1.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.testfx\testfx-core\4.0.6-alpha\a79bae778cb620b8bcc1b6744fd1ccbf6054a575\testfx-core-4.0.6-alpha.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.testfx\testfx-junit\4.0.6-alpha\4ae7d04920bb0fb8bb361d34c27ea878d9e008e0\testfx-junit-4.0.6-alpha.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-test\1.1.2-eap-44\4760a44cdf50bca28a4ebc23545ea3cde604c095\kotlin-test-1.1.2-eap-44.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy\1.5.12\b1ba1d15f102b36ed43b826488114678d6d413da\byte-buddy-1.5.12.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.5.12\bc2c4dc0a0c7ddc12d2bb389e228cd88378a8e3a\byte-buddy-agent-1.5.12.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.objenesis\objenesis\2.4\2916b6c96b50c5b3ec4452ed99401db745aabb27\objenesis-2.4.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.0.6\3d499d3b7768f88c4796e5a1e357933e11a8936d\kotlin-reflect-1.0.6.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\de.jodamob.kotlin\kotlin-runner\0.3.1\c390be26a56e3ef687d619e841aa5f0b22833d0d\kotlin-runner-0.3.1.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\21.0\3a3d111be1be1b745edfa7d91678a12d7ed38709\guava-21.0.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\annotations\3.0.1u2\89a670596c98e416fb2583c08ae34cc5c3ce2097\annotations-3.0.1u2.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\junit\junit\4.11\4e031bb61df09069aeb2bffb4019e7a5034a4ee0\junit-4.11.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.javassist\javassist\3.20.0-GA\a9cbcdfb7e9f86fbc74d3afae65f2248bfbf82a0\javassist-3.20.0-GA.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\net.jcip\jcip-annotations\1.0\afba4942caaeaf46aab0b976afd57cc7c181467e\jcip-annotations-1.0.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.1\f7be08ec23c21485b9b5a1cf1654c2ec8c58168d\jsr305-3.0.1.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\com.kohlschutter.junixsocket\junixsocket-native-common\2.0.4\726bd66a934dea39c817382986496fa4eda96411\junixsocket-native-common-2.0.4.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\com.kohlschutter.junixsocket\junixsocket-common\2.0.4\b4d1870bf903412533e0b79c6fcd402defcfc05b\junixsocket-common-2.0.4.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\org.scijava\native-lib-loader\2.0.2\1451fa03954c5e31a358b411147de472b4dab92c\native-lib-loader-2.0.2.jar;C:\Users\Andrey\.gradle\caches\modules-2\files-2.1\log4j\log4j\1.2.17\5af35056b4d257e4b64b9e8069c0746e8b08629f\log4j-1.2.17.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="ServerRequests_main" />
+          <option name="jvmTarget" value="1.6" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="languageVersion" value="1.1" />
+          <option name="apiVersion" value="1.1" />
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="coroutinesWarn" value="true" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+        </compilerArguments>
       </configuration>
     </facet>
   </component>
@@ -63,29 +37,29 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ServerRequests_main" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.2-eap-44" level="project" />
     <orderEntry type="library" name="Gradle: org.jsoup:jsoup:1.10.1" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.4.5" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.5.2" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex:rxjava:1.1.6" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex:rxkotlin:0.60.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:0.4-beta" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:0.14" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.1.2-eap-44" level="project" />
     <orderEntry type="library" name="Gradle: org.mockito:mockito-core:2.5.0" level="project" />
     <orderEntry type="library" name="Gradle: com.nhaarman:mockito-kotlin:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: de.jodamob.kotlin:kotlin-runner-junit4:0.3.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.testfx:testfx-core:4.0.5-alpha" level="project" />
-    <orderEntry type="library" name="Gradle: org.testfx:testfx-junit:4.0.5-alpha" level="project" />
+    <orderEntry type="library" name="Gradle: org.testfx:testfx-core:4.0.6-alpha" level="project" />
+    <orderEntry type="library" name="Gradle: org.testfx:testfx-junit:4.0.6-alpha" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.9" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test:1.1.2-eap-44" level="project" />
     <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.5.12" level="project" />
     <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy-agent:1.5.12" level="project" />
     <orderEntry type="library" name="Gradle: org.objenesis:objenesis:2.4" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.0.6" level="project" />
     <orderEntry type="library" name="Gradle: de.jodamob.kotlin:kotlin-runner:0.3.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.guava:guava:20.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:21.0" level="project" />
     <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:annotations:3.0.1u2" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />

@@ -1,5 +1,6 @@
 package serverrequests
 
+import javafx.beans.value.ChangeListener
 import javafx.collections.FXCollections
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
@@ -21,7 +22,9 @@ class Controller : Initializable {
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
         stopBtn!!.isDisable = true
-        method!!.items = FXCollections.observableArrayList(listOf("POST", "PUT"))
+        method!!.items = FXCollections.observableArrayList(model.methods)
+        method!!.value = model.defaultMethod
+        method!!.valueProperty().addListener{ _, oldValue, newValue ->  model.onMethodChange(oldValue, newValue)}
         startBtn!!.setOnMouseClicked { startExecution() }
 
         stopBtn!!.setOnMouseClicked { stopExecution() }
