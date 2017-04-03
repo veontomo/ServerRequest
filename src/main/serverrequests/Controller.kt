@@ -14,7 +14,6 @@ class Controller : Initializable {
     @FXML private var baseUrlText: TextField? = null
     @FXML private var pathsTextArea: TextArea? = null
     @FXML private var numOfThreadsText: TextField? = null
-    @FXML private var numRequestPerThreadText: TextField? = null
     @FXML private var method: ComboBox<String>? = null
     val model = Model()
 
@@ -25,8 +24,8 @@ class Controller : Initializable {
         method!!.value = model.defaultMethod
         method!!.valueProperty().addListener { _, oldValue, newValue -> model.onMethodChange(oldValue, newValue) }
         startBtn!!.setOnMouseClicked { startExecution() }
-
         stopBtn!!.setOnMouseClicked { stopExecution() }
+
         loadState(model.restoreState())
     }
 
@@ -46,16 +45,9 @@ class Controller : Initializable {
             0
         }
 
-
-        val req = try {
-            Integer.parseInt(numRequestPerThreadText!!.text)
-        } catch (e: NumberFormatException) {
-            0
-        }
         val requests = pathsTextArea!!.text
         saveState(baseUrl, requests, simReq)
-        model.start(baseUrl, req, simReq, requests.split(System.getProperty("line.separator")))
-
+        model.start(baseUrl, simReq, requests.split(System.getProperty("line.separator")))
     }
 
     fun saveState(baseUrl: String, paths: String, threads: Int) {

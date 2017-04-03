@@ -34,9 +34,9 @@ class Model {
      */
     var currentMethodIndex = 0
 
-    fun start(baseUrl: String, totalRequests: Int, threads: Int, paths: List<String>) {
+    fun start(baseUrl: String, threads: Int, paths: List<String>) {
         val requests = paths.map { it -> Get(baseUrl + it) }
-        (1..threads).map { it -> Thread(Runnable { Worker("$it", requests).start() }) }.forEach { it -> it.start() }
+        (1..threads).map { it -> Thread( Worker("$it", requests) ) }.forEach { it -> it.start() }
     }
 
     fun stop() {
