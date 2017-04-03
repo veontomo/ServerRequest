@@ -23,7 +23,7 @@ class Model {
     /**
      * List of available http methods
      */
-    val methods = listOf("POST", "PUT")
+    val methods = listOf("GET", "POST", "PUT")
     /**
      * Default http method
      */

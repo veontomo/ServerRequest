@@ -1,8 +1,10 @@
+import serverrequests.Report
 import serverrequests.Request
 import java.io.BufferedReader
 import java.io.DataOutputStream
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
+import java.net.MalformedURLException
 import java.net.URL
 
 /**
@@ -10,21 +12,18 @@ import java.net.URL
  */
 class Post(val target: String, val data: RequestData) : Request {
     private val charset = "UTF-8"
-    override fun perform() {
-        putContent2(target, data.toString())
-    }
-
-    private fun putContent2(address: String, data: String) {
+    override fun perform(): Report {
+        val info = data.toString()
         val url: URL
         var connection: HttpURLConnection? = null
         try {
             //Create connection
-            url = URL(address)
+            url = URL(target)
             connection = url.openConnection() as HttpURLConnection
             connection.requestMethod = "PUT"
             connection.setRequestProperty("Content-Type", "application/json")
 
-            connection.setRequestProperty("Content-Length", "" + Integer.toString(data.toByteArray().size))
+            connection.setRequestProperty("Content-Length", "" + Integer.toString(info.toByteArray().size))
             connection.setRequestProperty("Content-Language", charset)
 
             connection.useCaches = false
@@ -33,7 +32,7 @@ class Post(val target: String, val data: RequestData) : Request {
 
             //Send request
             val wr = DataOutputStream(connection.outputStream)
-            wr.writeBytes(data)
+            wr.writeBytes(info)
             wr.flush()
             wr.close()
             println("Done")
@@ -51,9 +50,10 @@ class Post(val target: String, val data: RequestData) : Request {
             rd.close()
             println("Put request ${response.toString()}")
 
-        } catch (e: Exception) {
+        } catch (e: MalformedURLException) {
 
             e.printStackTrace()
+            return Report(false, "invalid url $target: ${e.message}")
 
         } finally {
 
@@ -61,6 +61,7 @@ class Post(val target: String, val data: RequestData) : Request {
                 connection.disconnect()
             }
         }
+        return Report(true, "improve the message")
 
     }
 

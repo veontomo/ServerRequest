@@ -47,7 +47,7 @@ class Controller : Initializable {
 
         val requests = pathsTextArea!!.text
         saveState(baseUrl, requests, simReq)
-        model.start(baseUrl, simReq, requests.split(System.getProperty("line.separator")))
+        model.start(baseUrl, simReq, requests.split(Regex("\\s")))
     }
 
     fun saveState(baseUrl: String, paths: String, threads: Int) {

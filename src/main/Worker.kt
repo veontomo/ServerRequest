@@ -1,4 +1,5 @@
 package serverrequests
+
 /**
  *
  * An immutable data type.
@@ -14,11 +15,11 @@ class Worker(val name: String, val jobs: List<Request>) : Runnable {
      */
     fun start() {
         println("Worker: $name start")
-        jobs.forEach(Request::perform)
-        println("Worker: $name end")
+        val reports = jobs.map { it -> it.perform() }
+        println("Worker: $name end, jobs ${jobs.size}, reports: ${reports.size}")
     }
 
-    fun stop(){
+    fun stop() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

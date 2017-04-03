@@ -10,9 +10,9 @@ import java.net.URLConnection
  */
 class Get(val target: String) : Request {
     private val charset = "UTF-8"
-    override fun perform() {
-        var connection: URLConnection?
-        var response: InputStream
+    override fun perform(): Report {
+        val connection: URLConnection?
+        val response: InputStream
         val header: String
         try {
             connection = URL(target).openConnection()
@@ -22,11 +22,11 @@ class Get(val target: String) : Request {
             if (connection == null) {
                 println("no responce!")
             }
+            return Report(true, "")
         } catch (ex: MalformedURLException) {
-            println("url $target is not a valid one.")
+            return Report(false, "invalid url $target: ${ex.message}")
         } catch (ex: IOException) {
-            println("Get request failed: can not connect to $target")
-            ex.printStackTrace()
+            return Report(false, "Failed to connect to $target: ${ex.message}")
         }
 
     }

@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c621728e-2d4c-4b20-9367-d23e6a31ac8d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Get.kt" afterPath="$PROJECT_DIR$/src/main/Get.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Post.kt" afterPath="$PROJECT_DIR$/src/main/Post.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Request.kt" afterPath="$PROJECT_DIR$/src/main/Request.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Worker.kt" afterPath="$PROJECT_DIR$/src/main/Worker.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mainview.fxml" afterPath="$PROJECT_DIR$/src/main/resources/mainview.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/serverrequests/Controller.kt" afterPath="$PROJECT_DIR$/src/main/serverrequests/Controller.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/serverrequests/Model.kt" afterPath="$PROJECT_DIR$/src/main/serverrequests/Model.kt" />
     </list>
@@ -40,12 +42,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Model.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/serverrequests/Model.kt">
+      <file leaf-file-name="Controller.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/serverrequests/Controller.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="388">
+              <caret line="49" column="63" lean-forward="false" selection-start-line="49" selection-start-column="63" selection-end-line="49" selection-end-column="63" />
+              <folding>
+                <element signature="e#24#189#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,6 +68,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>);</find>
+      <find>size</find>
     </findStrings>
     <replaceStrings>
       <replace>)</replace>
@@ -522,15 +527,15 @@
         <option value="$PROJECT_DIR$/src/main/serverrequests/Sender.kt" />
         <option value="$PROJECT_DIR$/src/main/RequestData.kt" />
         <option value="$PROJECT_DIR$/src/main/serverrequests/RequestSenderGet.kt" />
-        <option value="$PROJECT_DIR$/src/main/Request.kt" />
         <option value="$PROJECT_DIR$/src/main/serverrequests/RequestSenderPut.kt" />
-        <option value="$PROJECT_DIR$/src/main/Post.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/Get.kt" />
         <option value="$PROJECT_DIR$/src/main/serverrequests/Config.kt" />
-        <option value="$PROJECT_DIR$/src/main/Worker.kt" />
-        <option value="$PROJECT_DIR$/src/main/serverrequests/Model.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/mainview.fxml" />
+        <option value="$PROJECT_DIR$/src/main/serverrequests/Model.kt" />
+        <option value="$PROJECT_DIR$/src/main/Request.kt" />
+        <option value="$PROJECT_DIR$/src/main/Get.kt" />
+        <option value="$PROJECT_DIR$/src/main/Post.kt" />
+        <option value="$PROJECT_DIR$/src/main/Worker.kt" />
         <option value="$PROJECT_DIR$/src/main/serverrequests/Controller.kt" />
       </list>
     </option>
@@ -1089,25 +1094,25 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.61247337" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.6108742" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.48720682" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.48081023" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.38752666" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.37313432" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.40511727" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.3891258" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.46375266" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.46162048" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17643923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48720682" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1136,9 +1141,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/serverrequests/Model.kt</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/serverrequests/Controller.kt</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="requests.split(&quot;\n&quot;)" language="kotlin" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1150,15 +1173,7 @@
         <state relative-caret-position="391">
           <caret line="23" column="72" lean-forward="false" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
           <folding>
-            <marker date="1491226547688" expanded="true" signature="31:189" ph="..." />
-            <marker date="1491226547688" expanded="true" signature="224:2038" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="638:1069" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1103:1203" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1238:1689" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1378:1443" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1477:1502" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1755:1847" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1883:2036" ph="{...}" />
+            <element signature="e#24#189#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1168,15 +1183,7 @@
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <marker date="1491226547688" expanded="true" signature="31:189" ph="..." />
-            <marker date="1491226547688" expanded="true" signature="224:2038" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="638:1069" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1103:1203" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1238:1689" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1378:1443" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1477:1502" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1755:1847" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1883:2036" ph="{...}" />
+            <element signature="e#24#189#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1189,8 +1196,8 @@
         <state relative-caret-position="238">
           <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding>
-            <marker date="1491226232136" expanded="true" signature="366:1404" ph="..." />
-            <marker date="1491226232136" expanded="true" signature="471:542" ph="..." />
+            <marker date="1491226851597" expanded="true" signature="366:1404" ph="..." />
+            <marker date="1491226851597" expanded="true" signature="471:542" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1203,8 +1210,8 @@
         <state relative-caret-position="238">
           <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding>
-            <marker date="1491226232136" expanded="true" signature="366:1404" ph="..." />
-            <marker date="1491226232136" expanded="true" signature="471:542" ph="..." />
+            <marker date="1491226851597" expanded="true" signature="366:1404" ph="..." />
+            <marker date="1491226851597" expanded="true" signature="471:542" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1214,15 +1221,7 @@
         <state relative-caret-position="714">
           <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
           <folding>
-            <marker date="1491226547688" expanded="true" signature="31:189" ph="..." />
-            <marker date="1491226547688" expanded="true" signature="224:2038" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="638:1069" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1103:1203" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1238:1689" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1378:1443" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1477:1502" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1755:1847" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1883:2036" ph="{...}" />
+            <element signature="e#24#189#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1232,15 +1231,7 @@
         <state relative-caret-position="714">
           <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
           <folding>
-            <marker date="1491226547688" expanded="true" signature="31:189" ph="..." />
-            <marker date="1491226547688" expanded="true" signature="224:2038" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="638:1069" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1103:1203" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1238:1689" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1378:1443" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1477:1502" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1755:1847" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1883:2036" ph="{...}" />
+            <element signature="e#24#189#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2281,77 +2272,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Request.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <marker date="1490971227467" expanded="true" signature="24:140" ph="/** An abstract data type for possible requests. ...*/" />
-            <marker date="1490971227467" expanded="true" signature="159:223" ph="{...}" />
-            <marker date="1490971227467" expanded="true" signature="165:203" ph="/** Perform the request ...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Post.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-          <folding>
-            <marker date="1490971460704" expanded="true" signature="7:178" ph="..." />
-            <marker date="1490971460704" expanded="true" signature="180:250" ph="/** An immutable data type corresponding to a POST http request ...*/" />
-            <marker date="1490971460704" expanded="true" signature="315:1998" ph="{...}" />
-            <marker date="1490971460704" expanded="true" signature="378:430" ph="{...}" />
-            <marker date="1490971460704" expanded="true" signature="491:1995" ph="{...}" />
-            <marker date="1490971460704" expanded="true" signature="576:1808" ph="{...}" />
-            <marker date="1490971460704" expanded="true" signature="1588:1716" ph="{...}" />
-            <marker date="1490971460704" expanded="true" signature="1830:1875" ph="{...}" />
-            <marker date="1490971460704" expanded="true" signature="1884:1988" ph="{...}" />
-            <marker date="1490971460704" expanded="true" signature="1923:1978" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Get.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <marker date="1491213336859" expanded="true" signature="30:164" ph="..." />
-            <marker date="1491213336859" expanded="true" signature="166:235" ph="/** An imumtable data type corresponding to a GET http request ...*/" />
-            <marker date="1491213336859" expanded="true" signature="276:1053" ph="{...}" />
-            <marker date="1491213336859" expanded="true" signature="339:1051" ph="{...}" />
-            <marker date="1491213336859" expanded="true" signature="453:804" ph="{...}" />
-            <marker date="1491213336859" expanded="true" signature="739:794" ph="{...}" />
-            <marker date="1491213336859" expanded="true" signature="839:905" ph="{...}" />
-            <marker date="1491213336859" expanded="true" signature="930:1044" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/serverrequests/Config.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
-            <marker date="1491223195621" expanded="true" signature="24:61" ph="/** The application GUI state. ...*/" />
-            <marker date="1491223195621" expanded="true" signature="134:137" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverrequests/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <marker date="1490281260179" expanded="true" signature="31:124" ph="..." />
-            <marker date="1490281260179" expanded="true" signature="156:178" ph="{...}" />
-            <marker date="1490281260179" expanded="true" signature="179:259" ph="/** A GUI application that performs various checks of selected html file. ...*/" />
-            <marker date="1490281260179" expanded="true" signature="286:617" ph="{...}" />
-            <marker date="1490281260179" expanded="true" signature="333:477" ph="{...}" />
-            <marker date="1490281260179" expanded="true" signature="500:612" ph="{...}" />
-            <marker date="1490281260179" expanded="true" signature="559:606" ph="{...}" />
+            <marker date="1491226851597" expanded="true" signature="24:61" ph="/** The application GUI state. ...*/" />
+            <marker date="1491226851597" expanded="true" signature="134:137" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2532,8 +2459,111 @@
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <marker date="1491226232136" expanded="true" signature="366:1404" ph="..." />
-            <marker date="1491226232136" expanded="true" signature="471:542" ph="..." />
+            <marker date="1491226851597" expanded="true" signature="366:1404" ph="..." />
+            <marker date="1491226851597" expanded="true" signature="471:542" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Request.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="57" lean-forward="false" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+          <folding>
+            <marker date="1491227692752" expanded="true" signature="24:140" ph="/** An abstract data type for possible requests. ...*/" />
+            <marker date="1491227692752" expanded="true" signature="159:231" ph="{...}" />
+            <marker date="1491227692752" expanded="true" signature="165:203" ph="/** Perform the request ...*/" />
+            <marker date="1491227692752" expanded="true" signature="293:297" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Get.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <marker date="1491228709105" expanded="true" signature="30:164" ph="..." />
+            <marker date="1491228709105" expanded="true" signature="166:235" ph="/** An imumtable data type corresponding to a GET http request ...*/" />
+            <marker date="1491228709105" expanded="true" signature="276:1090" ph="{...}" />
+            <marker date="1491228709105" expanded="true" signature="347:1088" ph="{...}" />
+            <marker date="1491228709105" expanded="true" signature="461:848" ph="{...}" />
+            <marker date="1491228709105" expanded="true" signature="747:802" ph="{...}" />
+            <marker date="1491228709105" expanded="true" signature="883:965" ph="{...}" />
+            <marker date="1491228709105" expanded="true" signature="990:1081" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Post.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+          <folding>
+            <marker date="1491229082166" expanded="true" signature="7:245" ph="..." />
+            <marker date="1491229082166" expanded="true" signature="247:317" ph="/** An immutable data type corresponding to a POST http request ...*/" />
+            <marker date="1491229082166" expanded="true" signature="382:2127" ph="{...}" />
+            <marker date="1491229082166" expanded="true" signature="453:2124" ph="{...}" />
+            <marker date="1491229082166" expanded="true" signature="573:1804" ph="{...}" />
+            <marker date="1491229082166" expanded="true" signature="1584:1712" ph="{...}" />
+            <marker date="1491229082166" expanded="true" signature="1838:1953" ph="{...}" />
+            <marker date="1491229082166" expanded="true" signature="1962:2066" ph="{...}" />
+            <marker date="1491229082166" expanded="true" signature="2001:2056" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Worker.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1491229414262" expanded="true" signature="24:116" ph="/** An immutable data type. ...*/" />
+            <marker date="1491229414262" expanded="true" signature="184:630" ph="{...}" />
+            <marker date="1491229414262" expanded="true" signature="209:232" ph="{...}" />
+            <marker date="1491229414262" expanded="true" signature="238:297" ph="/** Perform all jobs assigned to this worker ...*/" />
+            <marker date="1491229414262" expanded="true" signature="314:496" ph="{...}" />
+            <marker date="1491229414262" expanded="true" signature="513:628" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverrequests/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <marker date="1490281260179" expanded="true" signature="31:124" ph="..." />
+            <marker date="1490281260179" expanded="true" signature="156:178" ph="{...}" />
+            <marker date="1490281260179" expanded="true" signature="179:259" ph="/** A GUI application that performs various checks of selected html file. ...*/" />
+            <marker date="1490281260179" expanded="true" signature="286:617" ph="{...}" />
+            <marker date="1490281260179" expanded="true" signature="333:477" ph="{...}" />
+            <marker date="1490281260179" expanded="true" signature="500:612" ph="{...}" />
+            <marker date="1490281260179" expanded="true" signature="559:606" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverrequests/Model.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <marker date="1491226976827" expanded="true" signature="61:111" ph="/** A model corresponding to the controller ...*/" />
+            <marker date="1491226976827" expanded="true" signature="124:1994" ph="{...}" />
+            <marker date="1491226976827" expanded="true" signature="130:198" ph="/** Name of a token under which the base url is saved ...*/" />
+            <marker date="1491226976827" expanded="true" signature="243:309" ph="/** Name of a token under which the paths are saved ...*/" />
+            <marker date="1491226976827" expanded="true" signature="352:438" ph="/** Name of a token under which the value of number of threads is saved ...*/" />
+            <marker date="1491226976827" expanded="true" signature="492:541" ph="/** List of available http methods ...*/" />
+            <marker date="1491226976827" expanded="true" signature="593:631" ph="/** Default http method ...*/" />
+            <marker date="1491226976827" expanded="true" signature="672:748" ph="/** Index of currently selected method in the list {@methods} ...*/" />
+            <marker date="1491226976827" expanded="true" signature="847:1013" ph="{...}" />
+            <marker date="1491226976827" expanded="true" signature="1030:1145" ph="{...}" />
+            <marker date="1491226976827" expanded="true" signature="1151:1215" ph="/** Set up the index of currently selected method ...*/" />
+            <marker date="1491226976827" expanded="true" signature="1277:1405" ph="{...}" />
+            <marker date="1491226976827" expanded="true" signature="1349:1399" ph="{...}" />
+            <marker date="1491226976827" expanded="true" signature="1441:1682" ph="{...}" />
+            <marker date="1491226976827" expanded="true" signature="1715:1990" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2541,41 +2571,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/serverrequests/Controller.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
-          <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <caret line="49" column="63" lean-forward="false" selection-start-line="49" selection-start-column="63" selection-end-line="49" selection-end-column="63" />
           <folding>
-            <marker date="1491226547688" expanded="true" signature="31:189" ph="..." />
-            <marker date="1491226547688" expanded="true" signature="224:2038" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="638:1069" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1103:1203" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1238:1689" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1378:1443" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1477:1502" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1755:1847" ph="{...}" />
-            <marker date="1491226547688" expanded="true" signature="1883:2036" ph="{...}" />
+            <element signature="e#24#189#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Worker.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <marker date="1491226014594" expanded="true" signature="23:115" ph="/** An immutable data type. ...*/" />
-            <marker date="1491226014594" expanded="true" signature="183:568" ph="{...}" />
-            <marker date="1491226014594" expanded="true" signature="208:231" ph="{...}" />
-            <marker date="1491226014594" expanded="true" signature="237:296" ph="/** Perform all jobs assigned to this worker ...*/" />
-            <marker date="1491226014594" expanded="true" signature="313:435" ph="{...}" />
-            <marker date="1491226014594" expanded="true" signature="451:566" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverrequests/Model.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>

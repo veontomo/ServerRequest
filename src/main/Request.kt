@@ -12,5 +12,9 @@ interface Request {
     /**
      * Perform the request
      */
-    fun perform()
+    fun perform(): Report
+}
+
+data class Report(val status: Boolean, val message: String) {
+
 }
