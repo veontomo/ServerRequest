@@ -16,7 +16,7 @@ class Worker(val name: String, val jobs: List<Request>) : Runnable {
     fun start() {
         println("Worker: $name start")
         val reports = jobs.map { it -> it.perform() }
-        println("Worker: $name end, jobs ${jobs.size}, reports: ${reports.size}")
+        println("Worker: $name end, jobs ${jobs.size}, reports: ${reports.joinToString { it.message }}")
     }
 
     fun stop() {

@@ -10,7 +10,7 @@ import java.net.URL
 /**
  * An immutable data type corresponding to a POST http request
  */
-class Post(val target: String, val data: RequestData) : Request {
+class Put(val target: String, val data: RequestData) : Request {
     private val charset = "UTF-8"
     override fun perform(): Report {
         val info = data.toString()
@@ -48,7 +48,7 @@ class Post(val target: String, val data: RequestData) : Request {
                 line = rd.readLine()
             }
             rd.close()
-            println("Put request ${response.toString()}")
+            println("Put request $response")
 
         } catch (e: MalformedURLException) {
 

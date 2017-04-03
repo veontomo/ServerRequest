@@ -4,7 +4,7 @@ package serverrequests
  * An abstract data type for possible requests.
  *
  * A request is one of:
- * 1. Post
+ * 1. Put
  * 2. Get
  * 3. Delete
  */
