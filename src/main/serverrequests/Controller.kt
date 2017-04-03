@@ -1,6 +1,5 @@
 package serverrequests
 
-import javafx.beans.value.ChangeListener
 import javafx.collections.FXCollections
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
@@ -24,10 +23,11 @@ class Controller : Initializable {
         stopBtn!!.isDisable = true
         method!!.items = FXCollections.observableArrayList(model.methods)
         method!!.value = model.defaultMethod
-        method!!.valueProperty().addListener{ _, oldValue, newValue ->  model.onMethodChange(oldValue, newValue)}
+        method!!.valueProperty().addListener { _, oldValue, newValue -> model.onMethodChange(oldValue, newValue) }
         startBtn!!.setOnMouseClicked { startExecution() }
 
         stopBtn!!.setOnMouseClicked { stopExecution() }
+        loadState(model.restoreState())
     }
 
     private fun stopExecution() {
@@ -38,16 +38,36 @@ class Controller : Initializable {
 
     private fun startExecution() {
         startBtn!!.isDisable = true
-        val baseUrl = "http://192.168.5.95:8070"
-//        urlText!!.text
+        val baseUrl = baseUrlText!!.text
         stopBtn!!.isDisable = false
+        val simReq = try {
+            Integer.parseInt(numOfThreadsText!!.text)
+        } catch (e: NumberFormatException) {
+            0
+        }
 
-        val simReq = Integer.parseInt(numOfThreadsText!!.text)
-        val req = Integer.parseInt(numRequestPerThreadText!!.text)
-//        val requests = requestsTextArea!!.text.split("\n")
-        val requests = listOf("/subscribe", "/unsubscribe")
-        model.start(baseUrl, req, simReq, requests)
+
+        val req = try {
+            Integer.parseInt(numRequestPerThreadText!!.text)
+        } catch (e: NumberFormatException) {
+            0
+        }
+        val requests = pathsTextArea!!.text
+        saveState(baseUrl, requests, simReq)
+        model.start(baseUrl, req, simReq, requests.split(System.getProperty("line.separator")))
 
     }
 
+    fun saveState(baseUrl: String, paths: String, threads: Int) {
+        val config = Config(baseUrl, paths, threads)
+        model.saveState(config)
+    }
+
+    fun loadState(config: Config) {
+        baseUrlText!!.text = config.url
+        pathsTextArea!!.text = config.paths
+        numOfThreadsText!!.text = config.threads.toString()
+
+
+    }
 }

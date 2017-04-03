@@ -1,26 +1,42 @@
 package serverrequests
-import kotlinx.coroutines.experimental.CommonPool
-import kotlinx.coroutines.experimental.async
-import kotlinx.coroutines.experimental.launch
+
+import java.util.prefs.Preferences
 
 
 /**
  * A model corresponding to the controller
  */
 class Model {
+    /**
+     * Name of a token under which the base url is saved
+     */
+    private val BASE_URL_TOKEN = "url"
+
+    /**
+     * Name of a token under which the paths are saved
+     */
+    private val PATHS_TOKEN = "paths"
+    /**
+     * Name of a token under which the value of number of threads is saved
+     */
+    private val  THREADS_TOKEN ="num of threads"
+    /**
+     * List of available http methods
+     */
     val methods = listOf("POST", "PUT")
+    /**
+     * Default http method
+     */
     val defaultMethod = methods[0]
+
     /**
      * Index of currently selected method in the list {@methods}
      */
     var currentMethodIndex = 0
 
-    fun start(baseUrl: String, totalRequests: Int, maxSimRequests: Int, paths: List<String>) {
-        val requests = paths.map { it -> Get(it) }
-        val threads = (1..maxSimRequests).map { it -> Thread(Runnable { Worker("$it", requests).start() })}
-        threads.forEach { it -> it.start() }
-
-
+    fun start(baseUrl: String, totalRequests: Int, threads: Int, paths: List<String>) {
+        val requests = paths.map { it -> Get(baseUrl + it) }
+        (1..threads).map { it -> Thread(Runnable { Worker("$it", requests).start() }) }.forEach { it -> it.start() }
     }
 
     fun stop() {
@@ -35,28 +51,23 @@ class Model {
         if (index > -1) {
             currentMethodIndex = index
         }
-//        println("before launch: thread ${Thread.currentThread().name}")
-//        launch(CommonPool) {
-//            println("launch thread ${Thread.currentThread().name}")
-//            for (i in 1..3) {
-//                sleepAndWakeUp(i).await()
-//            }
-//        }
-//        println("after launch: thread ${Thread.currentThread().name}")
     }
 
-//    fun sleepAndWakeUp(ind: Int) = async(CommonPool) {
-//        println("$ind sleepAndWakeUp thread ${Thread.currentThread().name}")
-//        val original = longOperation(1000)
-//        println("$ind $original")
-//    }
-//
-//    fun longOperation(timeMs: Long): Long {
-//        println("longOperation thread ${Thread.currentThread().name}")
-//        val start = System.currentTimeMillis()
-//        Thread.sleep(timeMs)
-//        return System.currentTimeMillis() - start
-//    }
+    fun saveState(config: Config) {
+        val prefs = Preferences.userNodeForPackage(this::class.java)
+        prefs.put(BASE_URL_TOKEN, config.url)
+        prefs.put(PATHS_TOKEN, config.paths)
+        prefs.putInt(THREADS_TOKEN, config.threads)
+        prefs.flush()
+    }
+
+    fun restoreState(): Config {
+        val prefs = Preferences.userNodeForPackage(this::class.java)
+        val baseUrl = prefs.get(BASE_URL_TOKEN, "")
+        val paths = prefs.get(PATHS_TOKEN, "")
+        val threads = prefs.getInt(THREADS_TOKEN, 0)
+        return Config(baseUrl, paths, threads)
+    }
 
 
 }
