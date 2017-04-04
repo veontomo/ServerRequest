@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<HBox alignment="BASELINE_LEFT" xmlns:fx="http://javafx.com/fxml">
+    <padding>
+        <Insets bottom="5" left="5" right="5" top="5"/>
+    </padding>
+    <CheckBox mnemonicParsing="false" text="Ignore"/>
+    <TextField prefColumnCount="10"/>
+    <ComboBox fx:id="method"/>
+    <TextArea prefColumnCount="5" prefRowCount="3"/>
+
+</HBox>

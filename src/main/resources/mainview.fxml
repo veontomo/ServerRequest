@@ -4,8 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.Group?>
 <GridPane fx:controller="serverrequests.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="BASELINE_LEFT" hgap="10" vgap="10">
 
@@ -19,6 +19,7 @@
     <ComboBox fx:id="method" GridPane.columnIndex="7" GridPane.rowIndex="1" GridPane.columnSpan="1"/>
     <Label text="Simultaneous requests" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
     <TextField fx:id="numOfThreadsText" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Group fx:id="placeholder" GridPane.columnIndex="0" GridPane.rowIndex="11" GridPane.columnSpan="5"/>
     <Button fx:id="startBtn" text="Start" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
     <Button fx:id="stopBtn" text="Stop" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
 

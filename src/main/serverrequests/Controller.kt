@@ -2,8 +2,13 @@ package serverrequests
 
 import javafx.collections.FXCollections
 import javafx.fxml.FXML
+import javafx.fxml.FXMLLoader
 import javafx.fxml.Initializable
+import javafx.scene.Group
 import javafx.scene.control.*
+import javafx.scene.layout.GridPane
+import javafx.scene.layout.HBox
+import javafx.scene.layout.VBox
 import java.net.URL
 import java.util.*
 
@@ -15,6 +20,7 @@ class Controller : Initializable {
     @FXML private var pathsTextArea: TextArea? = null
     @FXML private var numOfThreadsText: TextField? = null
     @FXML private var method: ComboBox<String>? = null
+    @FXML private var placeholder: Group? = null
     val model = Model()
 
 
@@ -26,6 +32,17 @@ class Controller : Initializable {
         startBtn!!.setOnMouseClicked { startExecution() }
         stopBtn!!.setOnMouseClicked { stopExecution() }
 
+        val vbox = VBox(2.0)
+        val r = javaClass.getResource("/requestrow.fxml")
+
+
+        val n1 = FXMLLoader.load<HBox>(r)
+        val n2 = FXMLLoader.load<HBox>(r)
+        val n3 = FXMLLoader.load<HBox>(r)
+        val n4 = FXMLLoader.load<HBox>(r)
+        vbox.children.addAll(n1, n2, n3, n4)
+
+        placeholder!!.children.addAll(vbox)
         loadState(model.restoreState())
     }
 
